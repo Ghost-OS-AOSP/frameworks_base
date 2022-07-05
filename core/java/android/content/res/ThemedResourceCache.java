@@ -200,7 +200,7 @@ abstract class ThemedResourceCache<T> {
         synchronized (this) {
             if (mThemedEntries != null) {
                 mThemedEntries.entrySet()
-                    .removeIf(entry -> pruneEntriesLocked(entry.getValue(), configChanges))
+                    .removeIf(entry -> pruneEntriesLocked(entry.getValue(), configChanges));
             }
 
             pruneEntriesLocked(mNullThemedEntries, configChanges);

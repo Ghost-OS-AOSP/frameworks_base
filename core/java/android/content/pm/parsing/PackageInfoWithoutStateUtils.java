@@ -750,7 +750,6 @@ public class PackageInfoWithoutStateUtils {
     /** @see ApplicationInfo#flags */
     public static int appInfoFlags(ParsingPackageRead pkg) {
         // @formatter:off
-        return flag(pkg.isExternalStorage(), ApplicationInfo.FLAG_EXTERNAL_STORAGE)
         if (pkg instanceof ParsingPackageImpl) {
             ParsingPackageImpl pkgi = (ParsingPackageImpl) pkg;
             return flag(pkgi.isExternalStorage(), ApplicationInfo.FLAG_EXTERNAL_STORAGE)
